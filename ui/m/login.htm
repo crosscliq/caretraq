@@ -1,0 +1,63 @@
+<html>
+
+  <head>
+	<title>CareTraq</title>
+
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="/ui/m/css/style.css">
+
+	<!--Javascript-->
+    <script type="text/javascript" src="/ui/m/js/jquery-1.7.2.min.js" ></script>
+    <script>
+      $(document).ready(function() {
+      
+      		$('.topaccord').click( function(event) {
+			event.preventDefault();
+			  $('#accord-' + $(this).data('id')).slideToggle(100);
+			
+	
+		});
+      
+		$('.topaccord i').click( function(e) {
+			e.stopPropagation();
+			$(this).toggleClass('checked');
+			 $('#accord-' + $(this).parent('li').data('id')).slideToggle(100);
+		});
+
+		$('.subaccord ').click( function(e) {
+				e.stopPropagation();
+			$( this ).children('.check').toggleClass('checked');
+			
+		});
+		
+		$('#nav a').click( function(e) {
+		  e.stopPropagation();
+		console.log('a clicked!');
+		  $('#' + $(this).data('id')).show('slow').siblings('.content').hide('slow');
+		  $(this).toggleClass('active').siblings('a').removeClass('active');
+		});
+		
+		
+		
+	});
+    </script>
+  </head>
+  <body>
+	<div id="wrapper">
+	
+
+	  <div id="content">
+	    <div id="login">
+	      <img src="/ui/m/images/logo-large.png">
+	      <fieldset>
+		<input type="text" placeholder="username">
+		<input type="password" placeholder="password">
+		<button value="Login" onClick="window.location.href='/m/index2'">Login&nbsp;&nbsp;&nbsp;<div class="arrow">></div></button>
+	      </fieldset>
+	    </div>
+	  </div>
+	
+	</div>
+  </body>
+</html>

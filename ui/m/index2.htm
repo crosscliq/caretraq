@@ -1,0 +1,141 @@
+<html>
+
+  <head>
+	<title>CareTraq</title>
+	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link rel="stylesheet" href="/ui/m/css/style.css">
+
+	<!--Javascript-->
+    <script type="text/javascript" src="/ui/m/js/jquery-1.7.2.min.js" ></script>
+    <script>
+      $(document).ready(function() {
+      
+            	$('.plus').click( function(event) {
+		  event.preventDefault();
+		 $(this).siblings('.detail').fadeToggle(400);
+		});
+		$('.detail a').click( function(event) {
+		  event.preventDefault();
+		 $(this).parent('.detail').fadeToggle(400);
+		});
+		
+            	$('.menu-btn').click( function(event) {
+		  event.preventDefault();
+		  $('#menu').slideToggle(400);
+		});
+		
+	        $('#menu a').click( function(event) {
+		  event.preventDefault();
+		  $('#menu').slideToggle(400);
+		});
+      
+      		$('.topaccord').click( function(event) {
+			event.preventDefault();
+			  $('#accord-' + $(this).data('id')).slideToggle(400);
+			
+	
+		});
+      
+		$('.topaccord i').click( function(e) {
+			e.stopPropagation();
+			$(this).toggleClass('checked');
+			 $('#accord-' + $(this).parent('li').data('id')).slideToggle(200);
+		});
+
+		$('.subaccord ').click( function(e) {
+				e.stopPropagation();
+			$( this ).children('.check').toggleClass('checked');
+			
+		});
+		
+		$('#nav a').click( function(e) {
+		  e.stopPropagation();
+		console.log('a clicked!');
+		  $('#' + $(this).data('id')).show('slow').siblings('.content').hide('slow');
+		  $(this).toggleClass('active').siblings('a').removeClass('active');
+		});
+		
+		
+		
+	});
+    </script>
+  </head>
+  <body>
+	<div id="wrapper">
+	
+	  <div id="header">
+		<a href="#" class="menu-btn">mnu</a>
+		<a href="#" class="logo">logo</a>
+		<a href="#" class="search-btn">search</a>
+		<div id="menu" style="display:none;">
+		  <a href="#">patient info</a>
+		  <a href="#">log-time</a>
+		  <a href="#">schedule</a>
+		</div>	
+	  </div>
+
+	  <div id="content">
+
+	    <div class="profile">
+	      <img src="/ui/m/images/profile.jpg" class="profile-image">
+	       <h3>Aaron Shust</h3>
+	       <h4>Joined 5th November 2013</h4>
+	    </div>
+	  
+	    <div id="nav">
+		<a href="#" class="active" data-id="services">Services</a>
+		<a href="#" class="" data-id="medication">Medications</a>
+		<a href="#" class="">History</a>
+	    </div>
+	  
+	    <div id="services" class="content">
+	    
+	      <ul class="accordian">
+		<li data-id="1" class="topaccord">1. Personal Hygiene<i class="check"></i>
+		  <div id="accord-1" class="accord">
+	            <ul class="sub-accordian">
+		      <li class="subaccord">1. Bath<i class="check"></i></li>
+		      <li class="subaccord">1. Brush Teeth<i class="check"></i></li>
+		      <li class="subaccord">1. Change Clothes<i class="check"></i></li>
+		    </ul>
+		  </div>
+		</li>
+
+		<li data-id="2" class="topaccord">2. Administer Medication<i class="check"></i>
+		  <div id="accord-2" class="accord">
+	            <ul class="sub-accordian">
+		      <li class="subaccord">1. Anti-inflammatory<i class="check"></i></li>
+		    </ul>
+		  </div>		
+
+		</li>
+		<li data-id="3" class="topaccord">3. Wound Care & Dressing<i class="check"></i></li>
+		<li data-id="4" class="topaccord">4. Mental Wellness Check<i class="check"></i></li>
+	    </ul>
+	   </div>
+	   <div id="medication" style="display:none;" class="content">
+	     	      <ul class="accordian">
+		<li data-id="1" class="topaccord  grey"><img src="/ui/m/images/pill.jpg" class="thumb"><div class="details"><h1>Lorzepam</h1><b>Dose:</b> 100MG <br><b>Freq:</b> Twice Daily<br><b>Instructions:</b> Oral. No Refill.</div>
+		  <div id="detail-1" class="detail">
+			<a href="#" class='purple'>Completed</a><a href="#"  class='teal'>Alert MD</a>
+			<a href="#" class='teal'>Needs Refill</a><a href="#" class='blue'>History</a>
+		  </div>
+		  <div data-id="1" class="plus">+</div>
+		<div style="clear:both;"></div>
+		</li>
+		<li data-id="1" class="topaccord  grey"><img src="/ui/m/images/pill2.jpg" class="thumb"><div class="details"><h1>Loratab</h1><b>Dose:</b> 10MG <br><b>Freq:</b> Once Daily<br><b>Instructions:</b> Oral. No Refill.</div>
+		  <div id="detail-2" class="detail">
+			<a href="#" class='purple'>Completed</a><a href="#"  class='teal'>Alert MD</a>
+			<a href="#" class='teal'>Needs Refill</a><a href="#" class='blue'>History</a>
+		  </div>
+		  <div data-id="2" class="plus">+</div>
+		  <div style="clear:both;"></div>
+		</li>		
+		</ul>
+		
+	   </div>
+	
+	</div>
+  </body>
+</html>
