@@ -20,6 +20,39 @@ $pusher = new Pusher( $app_key, $app_secret, $app_id );
 
 }
 
+$f3->route('GET /',
+    function($f3) {
+        echo View::instance()->render('/site/index.html');
+    }
+);
+$f3->route('GET /hosting',
+    function($f3) {
+        echo View::instance()->render('/site/hosting.html');
+    }
+);
+
+$f3->route('GET /general_ph',
+    function($f3) {
+        echo View::instance()->render('/site/general_ph.html');
+    }
+);
+
+$f3->route('GET /general_icon',
+    function($f3) {
+        echo View::instance()->render('/site/general_ph.html');
+    }
+);
+$f3->route('GET /book',
+    function($f3) {
+        echo View::instance()->render('/site/book.html');
+    }
+);
+
+
+
+
+
+
 
 
 
