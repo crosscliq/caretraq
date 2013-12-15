@@ -11,9 +11,9 @@ $data['id'] = $id;
 $data['child'] = $child;
 
 	//event to pusher
-$app_id = '59967';
-$app_key = 'f3b8b0aeaf31c105168e';
-$app_secret = '87a99b695fda2400d4fd';
+$app_id = '61773';
+$app_key = 'ce5b7e3ef06c0c0253df';
+$app_secret = '8922920e8142a4d2fb73';
 
 $pusher = new Pusher( $app_key, $app_secret, $app_id );
 	$event = 	$pusher->trigger('nodes', 'addnode', $data );
@@ -27,7 +27,7 @@ $f3->set('DEBUG',1);
 
 $f3->config('config.ini');
 
-$f3->route('GET /',
+$f3->route('GET /dash',
     function($f3) {
        		
 $db=new DB\Jig('db/',DB\Jig::FORMAT_JSON);
@@ -41,21 +41,10 @@ $f3->set('placements', array_reverse($dash->placements));
 
         $f3->set('nodetree', $view->render('nodetree.htm'));
 
-        echo $view->render('dashboard.htm');
+        echo $view->render('/dash/index.html');
     }
 );
 
-
-$f3->route('GET /dav',
-    function($f3) {
-       		
-
-        $view=new View;
-
-        
-        echo $view->render('index-DAV.html');
-    }
-);
 
 
 $f3->set('UPLOADS','assets/'); // don't forget to set an Upload directory, and make it writable!
@@ -65,9 +54,9 @@ $f3->route('GET|POST /map/@lat/@lng/@name/@color',
     function($f3) {
             
         //event to pusher
-$app_id = '59967';
-$app_key = 'f3b8b0aeaf31c105168e';
-$app_secret = '87a99b695fda2400d4fd';
+$app_id = '61773';
+$app_key = 'ce5b7e3ef06c0c0253df';
+$app_secret = '8922920e8142a4d2fb73';
 
 $pusher = new Pusher( $app_key, $app_secret, $app_id );
 
@@ -87,9 +76,9 @@ $f3->route('GET|POST /map/update/@name/@color',
     function($f3) {
             
         //event to pusher
-$app_id = '59967';
-$app_key = 'f3b8b0aeaf31c105168e';
-$app_secret = '87a99b695fda2400d4fd';
+$app_id = '61773';
+$app_key = 'ce5b7e3ef06c0c0253df';
+$app_secret = '8922920e8142a4d2fb73';
 
 $pusher = new Pusher( $app_key, $app_secret, $app_id );
 
@@ -125,7 +114,7 @@ session_start();
     $data = array();
     $data['type'] = 'node';
     $data['name'] = 'Login';
-    $data['color'] = 'red';
+    $data['color'] = 'black';
     $data['link'] = '/m';
 
                 $view=new View;
@@ -145,12 +134,12 @@ session_start();
 
     $data = array();
     $data['type'] = 'node';
-    $data['name'] = 'Home';
-    $data['color'] = 'red';
+    $data['name'] = 'Login';
+    $data['color'] = 'black';
     $data['link'] = '/m';
 
                 $view=new View;
-                nodePusher($f3->get('SESSION.id').'login', $f3->get('SESSION.id').'home', $data);
+                nodePusher($f3->get('SESSION.id'), $f3->get('SESSION.id').'login', $data);
 
         echo $view->render('m/index.htm');
 
@@ -171,12 +160,12 @@ session_start();
 
     $data = array();
     $data['type'] = 'node';
-    $data['name'] = 'Index2';
+    $data['name'] = 'Aaron Shust';
     $data['color'] = 'red';
     $data['link'] = '/m';
 
                 $view=new View;
-                nodePusher($f3->get('SESSION.id').'home', $f3->get('SESSION.id').'index2', $data);
+                nodePusher($f3->get('SESSION.id').'login', $f3->get('SESSION.id').'index2', $data);
 
         echo $view->render('m/index2.htm');
 
@@ -184,7 +173,37 @@ session_start();
 );
 
 
+$f3->route('POST /m/index2',
+        function($f3) {
 
+session_start();
+    
+    $f3->set('SESSION.id', session_id());
+    $f3->set('SESSION.name', $f3->get('POST.username'));
+    $data = array();
+    $data['type'] = 'node';
+    $data['name'] = $f3->get('POST.username');
+    $data['color'] = 'black';
+    $data['link'] = '/m';
+
+        $view=new View;
+       nodePusher($f3->get('SESSION.id'), $f3->get('SESSION.id').'login', $data);
+
+
+       $data = array();
+    $data['type'] = 'child';
+    $data['name'] = 'Aaron Shust';
+    $data['color'] = 'red';
+    $data['link'] = '/m';
+
+                $view=new View;
+                nodePusher($f3->get('SESSION.id').'login', $f3->get('SESSION.id').'index2', $data);
+
+        echo $view->render('m/index2.htm');
+
+
+        }
+);
 
 
 

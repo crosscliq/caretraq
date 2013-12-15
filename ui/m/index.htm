@@ -50,9 +50,11 @@
 	    <div id="login">
 	      <img src="/ui/m/images/logo-large.png">
 	      <fieldset>
-		<input type="text" placeholder="username">
-		<input type="password" placeholder="password">
-		<button value="Login" onClick="window.location.href='/m/index2'">Login&nbsp;&nbsp;&nbsp;<div class="arrow">></div></button>
+	      <form action="/m/index2" method="post">
+		<input name="username" type="text" placeholder="username">
+		<input name="password" type="password" placeholder="password">
+		<button value="Login" type="submit">Login&nbsp;&nbsp;&nbsp;<div class="arrow">></div></button>
+		</form>
 	      </fieldset>
 	    </div>
 	  </div>

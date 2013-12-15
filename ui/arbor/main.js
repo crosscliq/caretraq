@@ -342,7 +342,7 @@
     nav.init()
 
 var server = sys.addNode('Server',{'id':'Server','color':'green','shape':'dot','label':'Sys','alpha':'1','link':''});
-        var tracker = sys.addNode('Tracking',{'id':'Tracking','color':'green','shape':'dot','label':'Trac','alpha':'1','link':''});
+    var tracker = sys.addNode('Tracking',{'id':'Tracking','color':'green','shape':'dot','label':'Trac','alpha':'1','link':''});
 
         sys.addEdge('Server','Tracking');
 
