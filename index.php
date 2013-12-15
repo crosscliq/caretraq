@@ -30,20 +30,45 @@ $f3->config('config.ini');
 $f3->route('GET /dash',
     function($f3) {
        		
-$db=new DB\Jig('db/',DB\Jig::FORMAT_JSON);
-$dash=new DB\Jig\Mapper($db,'proofofplacement');
-$dash->load(array('@dash=?','1'));
-
-$f3->set('placements', array_reverse($dash->placements));
-
-
         $view=new View;
-
-        $f3->set('nodetree', $view->render('nodetree.htm'));
 
         echo $view->render('/dash/index.html');
     }
 );
+
+
+$f3->route('GET /dash/users',
+    function($f3) {
+        $view=new View;
+        echo $view->render('/dash/users.html');
+    }
+);
+$f3->route('GET /dash/schedules',
+    function($f3) {
+        $view=new View;
+        echo $view->render('/dash/schedules.html');
+    }
+);
+$f3->route('GET /dash/support',
+    function($f3) {
+        $view=new View;
+        echo $view->render('/dash/support.html');
+    }
+);
+$f3->route('GET /dash/patients',
+    function($f3) {
+        $view=new View;
+        echo $view->render('/dash/patients.html');
+    }
+);
+$f3->route('GET /dash/history',
+    function($f3) {
+        $view=new View;
+        echo $view->render('/dash/history.html');
+    }
+);
+
+
 
 
 
