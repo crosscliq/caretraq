@@ -374,9 +374,56 @@ $(function(){
     },
     onLabelShow: function(e, el, code){
       el.html(el.html()+' (GDP - '+gdpData[code]+')');
-    }
+    },
+    onMarkerOver: function(e, code){
+            e.preventDefault();
+          },
+           onMarkerOut: function(e, code){
+             e.preventDefault();
+           },
+           onMarkerClick: function(e, code){
+            e.preventDefault();
+          },
+           onMarkerSelected: function(e, code){
+            e.preventDefault();
+          },
+          onMarkerLabelShow: function(e, code){
+            e.preventDefault();
+          },
+          onViewportChange: function(e, code){
+            e.preventDefault();
+          }
   });
+
+  
 });
+
+//adding marker with push
+   var mapChannel = pusher.subscribe('trafficmap');
+    mapChannel.bind('addTraffic', function(data) {
+     
+      var mapObject = $('#world-map-gdp').vectorMap('get', 'mapObject');
+
+       mapObject.addMarker(data.name, { latLng: [data.lat, data.lng], name: data.name}  );
+   
+    });
+
+    mapChannel.bind('changeColor', function(data) {
+    
+    $('[data-index=' + data.name + ']').attr('fill',data.fill);
+
+    console.log('change color of ' + data.name + ' to: ' + data.fill );
+  });
+
+
+
+
+
+</script>
+
+
+
+
 </script>
 <!-- end of maps --> 
 <!--switcher html start-->

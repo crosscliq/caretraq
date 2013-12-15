@@ -137,5 +137,34 @@
 	   </div>
 	
 	</div>
+	<script type="text/javascript">
+	 $(window).load( function () { 
+
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+ // error('not supported');
+}
+
+function trackonmap(position) {
+
+  var url = '/map/' + position.coords.latitude +'/' +position.coords.longitude +'/S<?php echo session_id();?>/red';
+
+  $.post( url, function( data ) {});
+
+}
+
+function success(position) {
+  trackonmap(position);
+}
+
+function error(position) {
+
+  console.log('location not found');
+
+}
+
+});
+	</script>
   </body>
 </html>
