@@ -128,97 +128,235 @@
         ]
     },
     {
-        "name": "dioscouri/f3-lib",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "name": "leafo/lessphp",
+        "version": "v0.4.0",
+        "version_normalized": "0.4.0.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/dioscouri/f3-lib.git",
-            "reference": "6b96cfb51781b4b0b23ae112c47f88b1f0a4cdd3"
+            "url": "https://github.com/leafo/lessphp.git",
+            "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/6b96cfb51781b4b0b23ae112c47f88b1f0a4cdd3",
-            "reference": "6b96cfb51781b4b0b23ae112c47f88b1f0a4cdd3",
+            "url": "https://api.github.com/repos/leafo/lessphp/zipball/51f3f06f0fe78a722dabfd14578444bdd078d9de",
+            "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de",
+            "shasum": ""
+        },
+        "time": "2013-08-09 17:09:19",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "0.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "lessc.inc.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT",
+            "GPL-3.0"
+        ],
+        "authors": [
+            {
+                "name": "Leaf Corcoran",
+                "email": "leafot@gmail.com",
+                "homepage": "http://leafo.net"
+            }
+        ],
+        "description": "lessphp is a compiler for LESS written in PHP.",
+        "homepage": "http://leafo.net/lessphp/"
+    },
+    {
+        "name": "symfony/event-dispatcher",
+        "version": "v2.4.0",
+        "version_normalized": "2.4.0.0",
+        "target-dir": "Symfony/Component/EventDispatcher",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/symfony/EventDispatcher.git",
+            "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
+            "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
             "shasum": ""
         },
         "require": {
-            "joomla/framework": ">=1.0",
-            "php": ">=5.4.0"
+            "php": ">=5.3.3"
         },
-        "time": "2013-12-28 22:46:38",
+        "require-dev": {
+            "symfony/dependency-injection": "~2.0"
+        },
+        "suggest": {
+            "symfony/dependency-injection": "",
+            "symfony/http-kernel": ""
+        },
+        "time": "2013-12-03 14:52:22",
         "type": "library",
-        "installation-source": "source",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.4-dev"
+            }
+        },
+        "installation-source": "dist",
         "autoload": {
             "psr-0": {
-                "Dsc": "src/"
+                "Symfony\\Component\\EventDispatcher\\": ""
             }
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Rafael Diaz-Tushman",
-                "email": "rdiaztushman@dioscouri.com",
-                "homepage": "http://dioscouri.com",
-                "role": "Developer"
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "http://symfony.com/contributors"
             }
         ],
-        "description": "Library for the F3-framework",
-        "homepage": "https://github.com/dioscouri/f3-lib",
-        "keywords": [
-            "F3",
-            "rad"
-        ]
+        "description": "Symfony EventDispatcher Component",
+        "homepage": "http://symfony.com"
     },
     {
-        "name": "dioscouri/f3-admin",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "name": "guzzle/guzzle",
+        "version": "v3.8.0",
+        "version_normalized": "3.8.0.0",
         "source": {
             "type": "git",
-            "url": "git@github.com:dioscouri/f3-admin.git",
-            "reference": "8486b77fd379baaa8c66d332102ebb0921a2ab38"
+            "url": "https://github.com/guzzle/guzzle.git",
+            "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69"
         },
         "dist": {
             "type": "zip",
-            "url": "http://satis-private.dioscouri.com/dist/dioscouri-f3-admin-dev-master-8cd15e.zip",
-            "reference": "8486b77fd379baaa8c66d332102ebb0921a2ab38",
-            "shasum": "3fc182c3265c28823735e47307596b224572bb2b"
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
+            "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
+            "shasum": ""
         },
         "require": {
-            "dioscouri/f3-lib": "dev-master",
-            "dioscouri/f3-users": "dev-master",
-            "php": ">=5.4.0"
+            "ext-curl": "*",
+            "php": ">=5.3.3",
+            "symfony/event-dispatcher": ">=2.1"
         },
-        "time": "2013-12-28 22:48:46",
-        "type": "component",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Admin": "src/"
+        "replace": {
+            "guzzle/batch": "self.version",
+            "guzzle/cache": "self.version",
+            "guzzle/common": "self.version",
+            "guzzle/http": "self.version",
+            "guzzle/inflection": "self.version",
+            "guzzle/iterator": "self.version",
+            "guzzle/log": "self.version",
+            "guzzle/parser": "self.version",
+            "guzzle/plugin": "self.version",
+            "guzzle/plugin-async": "self.version",
+            "guzzle/plugin-backoff": "self.version",
+            "guzzle/plugin-cache": "self.version",
+            "guzzle/plugin-cookie": "self.version",
+            "guzzle/plugin-curlauth": "self.version",
+            "guzzle/plugin-error-response": "self.version",
+            "guzzle/plugin-history": "self.version",
+            "guzzle/plugin-log": "self.version",
+            "guzzle/plugin-md5": "self.version",
+            "guzzle/plugin-mock": "self.version",
+            "guzzle/plugin-oauth": "self.version",
+            "guzzle/service": "self.version",
+            "guzzle/stream": "self.version"
+        },
+        "require-dev": {
+            "doctrine/cache": "*",
+            "monolog/monolog": "1.*",
+            "phpunit/phpunit": "3.7.*",
+            "psr/log": "1.0.*",
+            "symfony/class-loader": "*",
+            "zendframework/zend-cache": "2.0.*",
+            "zendframework/zend-log": "2.0.*"
+        },
+        "time": "2013-12-05 23:39:20",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.8-dev"
             }
         },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "Guzzle\\Tests": "tests/",
+                "Guzzle": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL"
+            "MIT"
         ],
         "authors": [
             {
-                "name": "Rafael Diaz-Tushman",
-                "email": "rdiaztushman@dioscouri.com",
-                "homepage": "http://dioscouri.com",
-                "role": "Developer"
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            },
+            {
+                "name": "Guzzle Community",
+                "homepage": "https://github.com/guzzle/guzzle/contributors"
             }
         ],
-        "description": "Admin component for the F3-framework",
-        "homepage": "https://github.com/dioscouri/f3-admin",
+        "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
+        "homepage": "http://guzzlephp.org/",
         "keywords": [
-            "Admin",
-            "CMS",
-            "F3",
-            "RAD"
+            "client",
+            "curl",
+            "framework",
+            "http",
+            "http client",
+            "rest",
+            "web service"
+        ]
+    },
+    {
+        "name": "twbs/bootstrap",
+        "version": "v3.0.0",
+        "version_normalized": "3.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/twbs/bootstrap.git",
+            "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e8a1df5f060bf7e6631554648e0abde150aedbe4",
+            "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4",
+            "shasum": ""
+        },
+        "time": "2013-08-19 21:18:20",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "sugeng tigefa",
+                "email": "tigefa@gmail.com"
+            },
+            {
+                "name": "Jacob Thornton",
+                "email": "jacobthornton@gmail.com"
+            }
+        ],
+        "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+        "homepage": "http://getbootstrap.com",
+        "keywords": [
+            "bootstrap",
+            "css"
         ]
     },
     {
@@ -432,199 +570,6 @@
         "homepage": "http://fatfreeframework.com/"
     },
     {
-        "name": "leafo/lessphp",
-        "version": "v0.4.0",
-        "version_normalized": "0.4.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/leafo/lessphp.git",
-            "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/leafo/lessphp/zipball/51f3f06f0fe78a722dabfd14578444bdd078d9de",
-            "reference": "51f3f06f0fe78a722dabfd14578444bdd078d9de",
-            "shasum": ""
-        },
-        "time": "2013-08-09 17:09:19",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "0.3-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "classmap": [
-                "lessc.inc.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT",
-            "GPL-3.0"
-        ],
-        "authors": [
-            {
-                "name": "Leaf Corcoran",
-                "email": "leafot@gmail.com",
-                "homepage": "http://leafo.net"
-            }
-        ],
-        "description": "lessphp is a compiler for LESS written in PHP.",
-        "homepage": "http://leafo.net/lessphp/"
-    },
-    {
-        "name": "symfony/event-dispatcher",
-        "version": "v2.4.0",
-        "version_normalized": "2.4.0.0",
-        "target-dir": "Symfony/Component/EventDispatcher",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/EventDispatcher.git",
-            "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
-            "reference": "acd1707236f6eb96fbb8d58f63d289b72ebc2f6e",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.3"
-        },
-        "require-dev": {
-            "symfony/dependency-injection": "~2.0"
-        },
-        "suggest": {
-            "symfony/dependency-injection": "",
-            "symfony/http-kernel": ""
-        },
-        "time": "2013-12-03 14:52:22",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.4-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Symfony\\Component\\EventDispatcher\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "http://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony EventDispatcher Component",
-        "homepage": "http://symfony.com"
-    },
-    {
-        "name": "guzzle/guzzle",
-        "version": "v3.8.0",
-        "version_normalized": "3.8.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
-            "reference": "b4a3ce8c05e777fa18b802956d5d0e38ad338a69",
-            "shasum": ""
-        },
-        "require": {
-            "ext-curl": "*",
-            "php": ">=5.3.3",
-            "symfony/event-dispatcher": ">=2.1"
-        },
-        "replace": {
-            "guzzle/batch": "self.version",
-            "guzzle/cache": "self.version",
-            "guzzle/common": "self.version",
-            "guzzle/http": "self.version",
-            "guzzle/inflection": "self.version",
-            "guzzle/iterator": "self.version",
-            "guzzle/log": "self.version",
-            "guzzle/parser": "self.version",
-            "guzzle/plugin": "self.version",
-            "guzzle/plugin-async": "self.version",
-            "guzzle/plugin-backoff": "self.version",
-            "guzzle/plugin-cache": "self.version",
-            "guzzle/plugin-cookie": "self.version",
-            "guzzle/plugin-curlauth": "self.version",
-            "guzzle/plugin-error-response": "self.version",
-            "guzzle/plugin-history": "self.version",
-            "guzzle/plugin-log": "self.version",
-            "guzzle/plugin-md5": "self.version",
-            "guzzle/plugin-mock": "self.version",
-            "guzzle/plugin-oauth": "self.version",
-            "guzzle/service": "self.version",
-            "guzzle/stream": "self.version"
-        },
-        "require-dev": {
-            "doctrine/cache": "*",
-            "monolog/monolog": "1.*",
-            "phpunit/phpunit": "3.7.*",
-            "psr/log": "1.0.*",
-            "symfony/class-loader": "*",
-            "zendframework/zend-cache": "2.0.*",
-            "zendframework/zend-log": "2.0.*"
-        },
-        "time": "2013-12-05 23:39:20",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.8-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Guzzle\\Tests": "tests/",
-                "Guzzle": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
-            },
-            {
-                "name": "Guzzle Community",
-                "homepage": "https://github.com/guzzle/guzzle/contributors"
-            }
-        ],
-        "description": "Guzzle is a PHP HTTP client library and framework for building RESTful web service clients",
-        "homepage": "http://guzzlephp.org/",
-        "keywords": [
-            "client",
-            "curl",
-            "framework",
-            "http",
-            "http client",
-            "rest",
-            "web service"
-        ]
-    },
-    {
         "name": "aws/aws-sdk-php",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -741,42 +686,97 @@
         ]
     },
     {
-        "name": "twbs/bootstrap",
-        "version": "v3.0.0",
-        "version_normalized": "3.0.0.0",
+        "name": "dioscouri/f3-lib",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/twbs/bootstrap.git",
-            "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4"
+            "url": "https://github.com/dioscouri/f3-lib.git",
+            "reference": "f631361225d7e7729219a38a25e62661ae3b4daf"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/twbs/bootstrap/zipball/e8a1df5f060bf7e6631554648e0abde150aedbe4",
-            "reference": "e8a1df5f060bf7e6631554648e0abde150aedbe4",
+            "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/f631361225d7e7729219a38a25e62661ae3b4daf",
+            "reference": "f631361225d7e7729219a38a25e62661ae3b4daf",
             "shasum": ""
         },
-        "time": "2013-08-19 21:18:20",
+        "require": {
+            "joomla/framework": ">=1.0",
+            "php": ">=5.4.0"
+        },
+        "time": "2013-12-31 15:54:00",
         "type": "library",
-        "installation-source": "dist",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Dsc": "src/"
+            }
+        },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "Apache-2.0"
+            "GPL"
         ],
         "authors": [
             {
-                "name": "sugeng tigefa",
-                "email": "tigefa@gmail.com"
-            },
-            {
-                "name": "Jacob Thornton",
-                "email": "jacobthornton@gmail.com"
+                "name": "Rafael Diaz-Tushman",
+                "email": "rdiaztushman@dioscouri.com",
+                "homepage": "http://dioscouri.com",
+                "role": "Developer"
             }
         ],
-        "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
-        "homepage": "http://getbootstrap.com",
+        "description": "Library for the F3-framework",
+        "homepage": "https://github.com/dioscouri/f3-lib",
         "keywords": [
-            "bootstrap",
-            "css"
+            "F3",
+            "rad"
+        ]
+    },
+    {
+        "name": "dioscouri/f3-admin",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:dioscouri/f3-admin.git",
+            "reference": "470e667e69a26b3859723caadc6a8cb35415ee17"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "http://satis-private.dioscouri.com/dist/dioscouri-f3-admin-dev-master-77318f.zip",
+            "reference": "470e667e69a26b3859723caadc6a8cb35415ee17",
+            "shasum": "22d09ff798d7aeade82dc78d07728d2532e52340"
+        },
+        "require": {
+            "dioscouri/f3-lib": "dev-master",
+            "dioscouri/f3-users": "dev-master",
+            "php": ">=5.4.0"
+        },
+        "time": "2013-12-31 16:05:41",
+        "type": "component",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Admin": "src/"
+            }
+        },
+        "license": [
+            "GPL"
+        ],
+        "authors": [
+            {
+                "name": "Rafael Diaz-Tushman",
+                "email": "rdiaztushman@dioscouri.com",
+                "homepage": "http://dioscouri.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Admin component for the F3-framework",
+        "homepage": "https://github.com/dioscouri/f3-admin",
+        "keywords": [
+            "Admin",
+            "CMS",
+            "F3",
+            "RAD"
         ]
     }
 ]

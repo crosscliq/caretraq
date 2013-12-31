@@ -105,13 +105,13 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:dioscouri/f3-admin.git",
-                "reference": "8486b77fd379baaa8c66d332102ebb0921a2ab38"
+                "reference": "470e667e69a26b3859723caadc6a8cb35415ee17"
             },
             "dist": {
                 "type": "zip",
-                "url": "http://satis-private.dioscouri.com/dist/dioscouri-f3-admin-dev-master-8cd15e.zip",
-                "reference": "8486b77fd379baaa8c66d332102ebb0921a2ab38",
-                "shasum": "3fc182c3265c28823735e47307596b224572bb2b"
+                "url": "http://satis-private.dioscouri.com/dist/dioscouri-f3-admin-dev-master-77318f.zip",
+                "reference": "470e667e69a26b3859723caadc6a8cb35415ee17",
+                "shasum": "22d09ff798d7aeade82dc78d07728d2532e52340"
             },
             "require": {
                 "dioscouri/f3-lib": "dev-master",
@@ -143,7 +143,7 @@
                 "F3",
                 "RAD"
             ],
-            "time": "2013-12-28 22:48:46"
+            "time": "2013-12-31 16:05:41"
         },
         {
             "name": "dioscouri/f3-assets",
@@ -241,12 +241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dioscouri/f3-lib.git",
-                "reference": "6b96cfb51781b4b0b23ae112c47f88b1f0a4cdd3"
+                "reference": "f631361225d7e7729219a38a25e62661ae3b4daf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/6b96cfb51781b4b0b23ae112c47f88b1f0a4cdd3",
-                "reference": "6b96cfb51781b4b0b23ae112c47f88b1f0a4cdd3",
+                "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/f631361225d7e7729219a38a25e62661ae3b4daf",
+                "reference": "f631361225d7e7729219a38a25e62661ae3b4daf",
                 "shasum": ""
             },
             "require": {
@@ -277,7 +277,7 @@
                 "F3",
                 "rad"
             ],
-            "time": "2013-12-28 22:46:38"
+            "time": "2013-12-31 15:54:00"
         },
         {
             "name": "dioscouri/f3-users",
