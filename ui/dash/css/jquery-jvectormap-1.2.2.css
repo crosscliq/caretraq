@@ -19,14 +19,14 @@
     -moz-border-radius: 3px;
     border-radius: 3px;
     background: #292929;
-    padding: 3px;
+
     color: white;
     width: 10px;
     height: 10px;
     cursor: pointer;
     line-height: 10px;
     text-align: center;
-}
+} 
 
 .jvectormap-zoomin {
     top: 10px;
@@ -36,6 +36,9 @@
     top: 30px;
 }
 #world-map-gdp {
+	height:400px;
+}
+#world-map-gdp2 {
 	height:400px;
 }
 .jvectormap-container {

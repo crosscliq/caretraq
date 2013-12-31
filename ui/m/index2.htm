@@ -4,7 +4,7 @@
 	<title>CareTraq</title>
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<link rel="stylesheet" href="/ui/m/css/style.css">
+	<link rel="stylesheet" href="/ui/m/css/style.css?4=22">
 
 	<!--Javascript-->
     <script type="text/javascript" src="/ui/m/js/jquery-1.7.2.min.js" ></script>
@@ -36,6 +36,16 @@
 			
 	
 		});
+
+
+
+		$('.add-btn ').click( function(e) {
+				e.stopPropagation();
+			$('[data-id=history]').click();
+			$('#add').slideToggle(400);
+			
+		});
+
       
 		$('.topaccord i').click( function(e) {
 			e.stopPropagation();
@@ -67,9 +77,9 @@
 	  <div id="header">
 		<a href="#" class="menu-btn">mnu</a>
 		<a href="#" class="logo">logo</a>
-		<a href="#" class="search-btn">search</a>
+		<a href="#" class="add-btn">add</a>
 		<div id="menu" style="display:none;">
-		  <a href="#">patient info</a>
+		  <a href="#">Logout</a>
 		  <a href="#">log-time</a>
 		  <a href="#">schedule</a>
 		</div>	
@@ -78,63 +88,121 @@
 	  <div id="content">
 
 	    <div class="profile">
-	      <img src="/ui/m/images/profile.jpg" class="profile-image">
-	       <h3>Aaron Shust</h3>
-	       <h4>Joined 5th November 2013</h4>
+	      <img src="/ui/m/images/product.png" class="left paddl img">
+		<div class="left paddl up bleft">
+	        <h3>current location:</h3>
+	        <h4>asset location</h4>
+	        <h4>asset id</h4>
+		 <div class="box">
+			job name<br/>
+			status
+		 </div>
+		</div>
+		<div style="clear:both;"></div>
 	    </div>
 	  
 	    <div id="nav">
-		<a href="#" class="active" data-id="services">Services</a>
-		<a href="#" class="" data-id="medication">Medications</a>
-		<a href="#" class="">History</a>
+		<a href="#" class="active" data-id="services">Installation</a>
+		<a href="#" class="" data-id="medication">Compliance</a>
+		<a href="#" class="" data-id="history">History</a>
 	    </div>
 	  
+	    <div id="history" class="content" style="display:none;">
+		<div id="add" style="display:none;">
+		<textarea placeholder="add notes"></textarea>
+		</div>	
+		<div class="tl" style="margin:auto;">
+                    <div class="tl-item">
+                      <div class="tl-desk">
+                        <div class="panel">
+                          <div class="panel-body"> <span class="arrow"></span> <span class="tl-icon red"></span> <span class="tl-date">09:40 am</span>
+                            <h3 class="red">18 june | Sunday</h3>
+                            <p>Lorem ipsum dolor sit amet consiquest dio</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item alt">
+                      <div class="tl-desk">
+                        <div class="panel">
+                          <div class="panel-body"> <span class="arrow-alt"></span> <span class="tl-icon green"></span> <span class="tl-date">10:00 am</span>
+                            <h3 class="green">25 July | Wednesday</h3>
+                            <p><a href="#">John Doe</a> added new milestone <span><a class="green" href="#">abc</a></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item">
+                      <div class="tl-desk">
+                        <div class="panel">
+                          <div class="panel-body"> <span class="arrow"></span> <span class="tl-icon yellow"></span> <span class="tl-date">11:35 am</span>
+                            <h3 class="yellow">05 July | Monday</h3>
+                            <p><a href="#">John Doe</a> added new album <span><a class="yellow" href="#">PARTY TIME</a></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item alt">
+                      <div class="tl-desk">
+                        <div class="panel">
+                          <div class="panel-body"> <span class="arrow-alt"></span> <span class="tl-icon blue"></span> <span class="tl-date">3:20 pm</span>
+                            <h3 class="blue">29 June | Saturday</h3>
+                            <p>Lorem ipsum dolor sit amet consiquest dio</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item">
+                      <div class="tl-desk">
+                        <div class="panel">
+                          <div class="panel-body"> <span class="arrow"></span> <span class="tl-icon turquoise"></span> <span class="tl-date">07:49 pm</span>
+                            <h3 class="turquoise">10 June | Friday</h3>
+                            <p><a href="#">John Doe</a> added new milestone <span><a class="turquoise" href="#">abc</a></span> Lorem ipsum dolor sit amet consiquest dio</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tl-item alt">
+                      <div class="tl-desk">
+                        <div class="panel">
+                          <div class="panel-body"> <span class="arrow-alt"></span> <span class="tl-icon orange"></span> <span class="tl-date">9:20 am</span>
+                            <h3 class="orange">13 June | Saturday</h3>
+                            <p>Lorem ipsum dolor sit amet consiquest dio</p>
+                            <div class="notification"> <i class=" icon-exclamation-sign"></i> New task added for <a href="#">John Doe</a> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+	    </div>
+
 	    <div id="services" class="content">
 	    
 	      <ul class="accordian">
-		<li data-id="1" class="topaccord">1. Personal Hygiene<i class="check"></i>
+		<li data-id="1" class="topaccord">1. First Question<i class="check"></i>
 		  <div id="accord-1" class="accord">
 	            <ul class="sub-accordian">
-		      <li class="subaccord">1. Bath<i class="check"></i></li>
-		      <li class="subaccord">1. Brush Teeth<i class="check"></i></li>
-		      <li class="subaccord">1. Change Clothes<i class="check"></i></li>
+		      <li class="subaccord">1. one<i class="check"></i></li>
+		      <li class="subaccord">1. two<i class="check"></i></li>
+		      <li class="subaccord">1. three<i class="check"></i></li>
 		    </ul>
 		  </div>
 		</li>
 
-		<li data-id="2" class="topaccord">2. Administer Medication<i class="check"></i>
+		<li data-id="2" class="topaccord">2. Second Question<i class="check"></i>
 		  <div id="accord-2" class="accord">
 	            <ul class="sub-accordian">
-		      <li class="subaccord">1. Anti-inflammatory<i class="check"></i></li>
+		      <li class="subaccord">1. one<i class="check"></i></li>
 		    </ul>
 		  </div>		
 
 		</li>
-		<li data-id="3" class="topaccord">3. Wound Care & Dressing<i class="check"></i></li>
-		<li data-id="4" class="topaccord">4. Mental Wellness Check<i class="check"></i></li>
+		<li data-id="3" class="topaccord">3. Third Question<i class="check"></i></li>
+		<li data-id="4" class="topaccord">4. Fourth Question<i class="check"></i></li>
 	    </ul>
 	   </div>
-	   <div id="medication" style="display:none;" class="content">
-	     	      <ul class="accordian">
-		<li data-id="1" class="topaccord  grey"><img src="/ui/m/images/pill.jpg" class="thumb"><div class="details"><h1>Lorzepam</h1><b>Dose:</b> 100MG <br><b>Freq:</b> Twice Daily<br><b>Instructions:</b> Oral. No Refill.</div>
-		  <div id="detail-1" class="detail">
-			<a href="#" class='purple'>Completed</a><a href="#"  class='teal'>Alert MD</a>
-			<a href="#" class='teal'>Needs Refill</a><a href="#" class='blue'>History</a>
-		  </div>
-		  <div data-id="1" class="plus">+</div>
-		<div style="clear:both;"></div>
-		</li>
-		<li data-id="1" class="topaccord  grey"><img src="/ui/m/images/pill2.jpg" class="thumb"><div class="details"><h1>Loratab</h1><b>Dose:</b> 10MG <br><b>Freq:</b> Once Daily<br><b>Instructions:</b> Oral. No Refill.</div>
-		  <div id="detail-2" class="detail">
-			<a href="#" class='purple'>Completed</a><a href="#"  class='teal'>Alert MD</a>
-			<a href="#" class='teal'>Needs Refill</a><a href="#" class='blue'>History</a>
-		  </div>
-		  <div data-id="2" class="plus">+</div>
-		  <div style="clear:both;"></div>
-		</li>		
-		</ul>
-		
-	   </div>
+
+
 	
 	</div>
 	<script type="text/javascript">

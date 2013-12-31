@@ -10,8 +10,11 @@
 <link href="/ui/dash/style/style.css" rel="stylesheet">
 <link href="/ui/dash/style/dashboard.css" rel="stylesheet">
 <link href="/ui/dash/assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen"/>
-<link href="/ui/dash/css/jquery-jvectormap-1.2.2.css" rel="stylesheet"/>
-     <?php echo View::instance()->render('pusher.htm'); ?>
+
+<link href="/ui/dash/style/fullcalendar.css" rel="stylesheet" />
+<link href="/ui/dash/style/fullcalendar.print.css" rel="stylesheet" media="print"/>
+
+
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -22,7 +25,7 @@
 <body>
 <div class="container">
   <div class="top-navbar header b-b"> <a data-original-title="Toggle navigation" class="toggle-side-nav pull-left" href="#"><i class="icon-reorder"></i> </a>
-    <div class="brand pull-left"> <a href="/dash"><img src="/ui/dash/images/logo.png" width="147" height="33"></a></div>
+    <div class="brand pull-left"> <a href="/dash"><img src="/ui/dash/images/clogo3.png" ></a></div>
     <ul class="nav navbar-nav navbar-right  hidden-xs">
       <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle" href="#"> <i class="icon-warning-sign"></i> <span class="badge">5</span> </a>
         <ul class="dropdown-menu extended notification">
@@ -95,12 +98,13 @@
   <div class="left-nav">
     <div id="side-nav">
       <ul id="nav">
-        <li > <a href="/dash"> <i class="icon-dashboard"></i> Dashboard </a> </li>
+        <li> <a href="/dash"> <i class="icon-dashboard"></i> Dashboard </a> </li>
         <li> <a href="/dash/users"> <i class="icon-user"></i>Users</a> </li>
-        <li> <a href="/dash/patients"> <i class="icon-group"></i>Patients </a> </li>
-        <li> <a href="/dash/history"> <i class="icon-time"></i>History </a> </li>
-        <li class="current"> <a href="/dash/schedules"> <i class="icon-list"></i>Schedules </a> </li>
-        <li> <a href="/dash/support"> <i class="icon-question"></i>Support</a> </li>
+        <li> <a href="/dash/projects"> <i class="icon-list"></i>Projects </a> </li>
+        <li> <a href="/dash/assets"> <i class="icon-folder-close"></i>Assets </a> </li>
+        <li> <a href="/dash/photos"> <i class="icon-picture"></i>Photos </a> </li>
+        <li> <a href="/dash/locations"> <i class="icon-map-marker"></i>Locations </a> </li> 
+        <li class="current"> <a href="/dash/schedules"> <i class="icon-calendar"></i>Schedules</a> </li>
       </ul>
     </div>
   </div>
@@ -108,8 +112,18 @@
     <div class="content container">
       <div class="row">
         <div class="col-lg-12">
-          <h2 class="page-title">Schedules <small>Statistics and more</small></h2>
+          <h2 class="page-title">Schedules <small></small></h2>
         </div>
+<div class="col-lg-12">
+          <div class="widget">
+            <div class="widget-header"> <i class="icon-calendar"></i>
+              <h3>Calendar</h3>
+            </div>
+            <div class="widget-content">
+              <div id="calendar" class="fc fc-ltr"></div>
+          </div>
+        </div>
+
       </div>
       
             </div>
@@ -125,71 +139,72 @@
 <script class="include" type="text/javascript" src="/ui/dash/javascript/jquery191.min.js"></script> 
 <script class="include" type="text/javascript" src="/ui/dash/javascript/jquery.jqplot.min.js"></script> 
 
-<script src="/ui/dash/assets/sparkline/jquery.sparkline.js" type="text/javascript"></script>
-<script src="/ui/dash/assets/sparkline/jquery.customSelect.min.js" ></script>
-<script src="/ui/dash/assets/sparkline/sparkline-chart.js"></script>
-<script src="/ui/dash/assets/sparkline/easy-pie-chart.js"></script>
-<!-- maps --> 
-<script src="/ui/dash/js/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="/ui/dash/js/jquery-jvectormap-world-mill-en.js"></script>
-<script src="/ui/dash/js/gdp-data.js"></script>
-<script type="text/javascript">
-$(function(){
-  $('#world-map-gdp').vectorMap({
-    map: 'world_mill_en',
-    series: {
-      regions: [{
-        values: gdpData,
-        scale: ['#290933', '#fadab8'],
-        normalizeFunction: 'polynomial'
-      }]
-    },
-    onLabelShow: function(e, el, code){
-      el.html(el.html()+' (GDP - '+gdpData[code]+')');
-    },
-    onMarkerOver: function(e, code){
-            e.preventDefault();
-          },
-           onMarkerOut: function(e, code){
-             e.preventDefault();
-           },
-           onMarkerClick: function(e, code){
-            e.preventDefault();
-          },
-           onMarkerSelected: function(e, code){
-            e.preventDefault();
-          },
-          onMarkerLabelShow: function(e, code){
-            e.preventDefault();
-          },
-          onViewportChange: function(e, code){
-            e.preventDefault();
-          }
-  });
+<script src="/ui/dash/javascript/fullcalendar.min.js"></script> 
+<script>
 
-  
-});
-
-//adding marker with push
-   var mapChannel = pusher.subscribe('trafficmap');
-    mapChannel.bind('addTraffic', function(data) {
-     
-      var mapObject = $('#world-map-gdp').vectorMap('get', 'mapObject');
-
-       mapObject.addMarker(data.name, { latLng: [data.lat, data.lng], name: data.name}  );
-   
-    });
-
-    mapChannel.bind('changeColor', function(data) {
-    
-    $('[data-index=' + data.name + ']').attr('fill',data.fill);
-
-    console.log('change color of ' + data.name + ' to: ' + data.fill );
-  });
-
-
-
-
+	$(document).ready(function() {
+	
+		var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			header: {
+				left: 'prev,next today',
+				center: 'title',
+				right: 'month,basicWeek,basicDay'
+			},
+			editable: true,
+			events: [
+				{
+					title: 'All Day Event',
+					start: new Date(y, m, 1)
+				},
+				{
+					title: 'Long Event',
+					start: new Date(y, m, d-5),
+					end: new Date(y, m, d-2)
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d-3, 16, 0),
+					allDay: false
+				},
+				{
+					id: 999,
+					title: 'Repeating Event',
+					start: new Date(y, m, d+4, 16, 0),
+					allDay: false
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d, 12, 0),
+					end: new Date(y, m, d, 14, 0),
+					allDay: false
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d+1, 19, 0),
+					end: new Date(y, m, d+1, 22, 30),
+					allDay: false
+				},
+				{
+					title: 'Click for Google',
+					start: new Date(y, m, 28),
+					end: new Date(y, m, 29),
+					url: 'http://google.com/'
+				}
+			]
+		});
+		
+	});
 
 </script>
 

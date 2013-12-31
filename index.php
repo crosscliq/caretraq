@@ -30,6 +30,11 @@ $f3->route('GET /hosting',
         echo View::instance()->render('/site/hosting.html');
     }
 );
+$f3->route('GET /dash/services',
+    function($f3) {
+        echo View::instance()->render('/dash/services.html');
+    }
+);
 
 $f3->route('GET /general_ph',
     function($f3) {
@@ -70,6 +75,13 @@ $f3->route('GET /dash',
 );
 
 
+$f3->route('GET /dash/profile',
+    function($f3) {
+        $view=new View;
+        echo $view->render('/dash/profile.html');
+    }
+);
+
 $f3->route('GET /dash/users',
     function($f3) {
         $view=new View;
@@ -82,25 +94,30 @@ $f3->route('GET /dash/schedules',
         echo $view->render('/dash/schedules.html');
     }
 );
-$f3->route('GET /dash/support',
+$f3->route('GET /dash/photos',
     function($f3) {
         $view=new View;
-        echo $view->render('/dash/support.html');
+        echo $view->render('/dash/photos.html');
     }
 );
-$f3->route('GET /dash/patients',
+$f3->route('GET /dash/projects',
     function($f3) {
         $view=new View;
-        echo $view->render('/dash/patients.html');
+        echo $view->render('/dash/projects.html');
     }
 );
-$f3->route('GET /dash/history',
+$f3->route('GET /dash/assets',
     function($f3) {
         $view=new View;
-        echo $view->render('/dash/history.html');
+        echo $view->render('/dash/assets.html');
     }
 );
-
+$f3->route('GET /dash/locations',
+    function($f3) {
+        $view=new View;
+        echo $view->render('/dash/locations.html');
+    }
+);
 
 
 
