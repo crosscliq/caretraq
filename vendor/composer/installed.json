@@ -454,53 +454,6 @@
         ]
     },
     {
-        "name": "dioscouri/f3-blog",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "git@github.com:dioscouri/f3-blog.git",
-            "reference": "d22069b3dc12be900978c6f5c36cd0038ca86f48"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "http://satis-private.dioscouri.com/dist/dioscouri-f3-blog-dev-master-1028fa.zip",
-            "reference": "d22069b3dc12be900978c6f5c36cd0038ca86f48",
-            "shasum": "e74bf5f788743ec22277c4ad5ced13e86241131c"
-        },
-        "require": {
-            "dioscouri/f3-admin": "dev-master",
-            "dioscouri/f3-lib": "dev-master",
-            "php": ">=5.4.0"
-        },
-        "time": "2013-12-28 22:47:44",
-        "type": "component",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Blog": "src/"
-            }
-        },
-        "license": [
-            "GPL"
-        ],
-        "authors": [
-            {
-                "name": "Rafael Diaz-Tushman",
-                "email": "rdiaztushman@dioscouri.com",
-                "homepage": "http://dioscouri.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Blog component for the F3-framework",
-        "homepage": "https://github.com/dioscouri/f3-blog",
-        "keywords": [
-            "Blog",
-            "F3",
-            "RAD"
-        ]
-    },
-    {
         "name": "firephp/firephp-core",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -636,18 +589,65 @@
         ]
     },
     {
+        "name": "dioscouri/f3-blog",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "git@github.com:dioscouri/f3-blog.git",
+            "reference": "31d77d4685e9ecca6f0e8cfa7e24ad917528112f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "http://satis-private.dioscouri.com/dist/dioscouri-f3-blog-dev-master-04d57c.zip",
+            "reference": "31d77d4685e9ecca6f0e8cfa7e24ad917528112f",
+            "shasum": "de6ec25526c936c3f1bf523842f5afb628e556b5"
+        },
+        "require": {
+            "dioscouri/f3-admin": "dev-master",
+            "dioscouri/f3-lib": "dev-master",
+            "php": ">=5.4.0"
+        },
+        "time": "2014-01-03 00:28:37",
+        "type": "component",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Blog": "src/"
+            }
+        },
+        "license": [
+            "GPL"
+        ],
+        "authors": [
+            {
+                "name": "Rafael Diaz-Tushman",
+                "email": "rdiaztushman@dioscouri.com",
+                "homepage": "http://dioscouri.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Blog component for the F3-framework",
+        "homepage": "https://github.com/dioscouri/f3-blog",
+        "keywords": [
+            "Blog",
+            "F3",
+            "RAD"
+        ]
+    },
+    {
         "name": "aws/aws-sdk-php",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/aws/aws-sdk-php.git",
-            "reference": "4be7f2a5bf7b17da9c281d7ff5790b35c725fe33"
+            "reference": "ce888dac72d11166905c63509c9ce66a992a171b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4be7f2a5bf7b17da9c281d7ff5790b35c725fe33",
-            "reference": "4be7f2a5bf7b17da9c281d7ff5790b35c725fe33",
+            "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/ce888dac72d11166905c63509c9ce66a992a171b",
+            "reference": "ce888dac72d11166905c63509c9ce66a992a171b",
             "shasum": ""
         },
         "require": {
@@ -669,7 +669,7 @@
             "monolog/monolog": "Adds support for logging HTTP requests and responses",
             "symfony/yaml": "Eases the ability to write manifests for creating jobs in AWS Import/Export"
         },
-        "time": "2014-01-01 21:14:44",
+        "time": "2014-01-02 23:16:49",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -712,18 +712,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/bcosca/fatfree.git",
-            "reference": "ec62b25a55e0068b1a42ef8ef20a88f306f9becd"
+            "reference": "4faa4bd4718aad6e3b11c6e4a0d1964bf7fadeb9"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/bcosca/fatfree/zipball/ec62b25a55e0068b1a42ef8ef20a88f306f9becd",
-            "reference": "ec62b25a55e0068b1a42ef8ef20a88f306f9becd",
+            "url": "https://api.github.com/repos/bcosca/fatfree/zipball/4faa4bd4718aad6e3b11c6e4a0d1964bf7fadeb9",
+            "reference": "4faa4bd4718aad6e3b11c6e4a0d1964bf7fadeb9",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3.0"
         },
-        "time": "2014-01-02 17:52:45",
+        "time": "2014-01-03 14:30:38",
         "type": "library",
         "installation-source": "source",
         "notification-url": "https://packagist.org/downloads/",
@@ -740,19 +740,19 @@
         "source": {
             "type": "git",
             "url": "https://github.com/dioscouri/f3-lib.git",
-            "reference": "66860314d2229f5acd3820b59faa02816e4763f9"
+            "reference": "ad298971fd3146698a1b563ad394870d3b471a12"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/66860314d2229f5acd3820b59faa02816e4763f9",
-            "reference": "66860314d2229f5acd3820b59faa02816e4763f9",
+            "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/ad298971fd3146698a1b563ad394870d3b471a12",
+            "reference": "ad298971fd3146698a1b563ad394870d3b471a12",
             "shasum": ""
         },
         "require": {
             "joomla/framework": ">=1.0",
             "php": ">=5.4.0"
         },
-        "time": "2014-01-02 18:09:15",
+        "time": "2014-01-03 00:29:05",
         "type": "library",
         "installation-source": "source",
         "autoload": {
