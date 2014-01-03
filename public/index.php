@@ -35,9 +35,9 @@ $custom = $app->get('PATH_ROOT').'apps/Companies/';
 
 \Dsc\Apps::instance()->bootstrap(null, array($custom ));
 
-$db_name = \Base::instance()->get('db.mongo.name');
-$db = new \DB\Mongo('mongodb://localhost:27017', $db_name);
-new \DB\Mongo\Session($db);
+//$db_name = \Base::instance()->get('db.mongo.name');
+//$db = new \DB\Mongo('mongodb://localhost:27017', $db_name);
+//new \DB\Mongo\Session($db);
 
 
  $model = new \Admin\Models\Menus;
