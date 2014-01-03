@@ -50,7 +50,7 @@ value="<?php echo $project->_id; ?>"><?php echo $project->name; ?></option>
                 <th data-sortable="name">Name</th>
                 <th data-sortable="description">Description</th>
                
-                <th>Start Date</th>
+                <th>Project</th>
                 <th>End Date</th>
                 <th></th>
                 <th></th>
@@ -89,7 +89,9 @@ value="<?php echo $project->_id; ?>"><?php echo $project->name; ?></option>
                         <?php echo $item->description; ?>
                     </td>
                     <td class="">
-                        <?php echo $item->start_date; ?>
+                         <a href="./dash/track/project/read/<?php echo $item->project['id']; ?>">
+                        <?php echo $item->project['name']; ?>
+                        </a>
                     </td>
                     <td class="">
                         <?php echo $item->end_date; ?>

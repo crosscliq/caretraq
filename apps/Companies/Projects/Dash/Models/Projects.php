@@ -80,7 +80,7 @@ class Projects extends Base
 
     public function getDisplays($id) {
         $model = new \Companies\Projects\Dash\Models\Displays;
-
+        
         $list = $model->emptyState()->populateState()->setFilter('project_id', (string) $id)->getList();
         
         return $list;
