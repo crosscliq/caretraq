@@ -18,8 +18,6 @@ if (strpos(strtolower($app->get('URI')), $app->get('BASE') . '/admin') !== false
 }
 if (strpos(strtolower($app->get('URI')), $app->get('BASE') . '/dash') !== false) {
     $app->set('APP_NAME', 'dash');
-
-    
 }
 
 // common config
@@ -32,16 +30,14 @@ if ($app->get('DEBUG')) {
     ini_set('display_errors',1);
 }
 
-
-
 // bootstap each mini-app
 $custom = $app->get('PATH_ROOT').'apps/Companies/';
 
 \Dsc\Apps::instance()->bootstrap(null, array($custom ));
 
  $model = new \Admin\Models\Menus;
- $model->setState('filter.parent', '52c25c8a33231ab2798b4568')->setState('order_clause', array( 'tree'=> 1, 'lft' => 1 ));
- //$model->setState('filter.parent', '52c22f8523195a75560041a9')->setState('order_clause', array( 'tree'=> 1, 'lft' => 1 ));
+ //$model->setState('filter.parent', '52c25c8a33231ab2798b4568')->setState('order_clause', array( 'tree'=> 1, 'lft' => 1 ));
+ $model->setState('filter.parent', '52c22f8523195a75560041a9')->setState('order_clause', array( 'tree'=> 1, 'lft' => 1 ));
 
  $list = $model->getList();
  $app->set('primary', $list);

@@ -1,5 +1,5 @@
 <?php 
-namespace Companies\Users\Dash;
+namespace Companies\Users;
 
 class Listener extends \Prefab 
 {

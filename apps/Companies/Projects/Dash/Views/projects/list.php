@@ -5,7 +5,7 @@
 
 <br clear="both">
 
-<form id="list-form" action="/" method="post">
+<form id="list-form" action="" method="post">
 
     <div class="row datatable-header">
           
