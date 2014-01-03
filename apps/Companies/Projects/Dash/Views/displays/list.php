@@ -1,14 +1,30 @@
+<?php // echo \Dsc\Debug::dump( $state, false ); ?>
+
 <div class="col-lg-12">
-          <h2 class="page-title pull-left">Projects <small> </small></h2>
-          <a class="btn btn-success pull-right" href="/dash/track/project/create">Create Project</a>
+          <h2 class="page-title pull-left">Displays <small> </small></h2>
+          <?php if($state->get('filter.project_id')) : ?>
+          <a class="btn btn-success pull-right" href="/dash/track/display/create?pid=<?=$state->get('filter.project_id')?>">Create Display</a>
+          <?php endif; ?>
   </div>
 
 <br clear="both">
 
-<form id="list-form" action="/" method="post">
 
+
+
+<form id="list-form" action="" method="post">
+
+<select name="filter[project_id]" class="pull-left">
+<option value="">-- Select Project --</option>
+<?php foreach ($projects as $project) : ?>
+<option 
+<?php if($state->get('filter.project_id') == $project->_id) : ?>
+selected=selected
+<?php endif; ?>
+value="<?php echo $project->_id; ?>"><?php echo $project->name; ?></option>
+<?php endforeach; ?>
+</select>
     <div class="row datatable-header">
-          
         <div class="col-sm-6 pull-right">
             <div class="input-group">
                 <input class="form-control" type="text" name="filter[keyword]" placeholder="Keyword" maxlength="200" value="<?php echo $state->get('filter.keyword'); ?>"> 
@@ -31,7 +47,7 @@
         <thead>
             <tr>
                 <th class="checkbox-column"><input type="checkbox" class="icheck-input"></th>
-                <th data-sortable="name">Project Name</th>
+                <th data-sortable="name">Name</th>
                 <th data-sortable="description">Description</th>
                
                 <th>Start Date</th>
@@ -56,7 +72,7 @@
         <tbody>    
         
         <?php if (!empty($list['subset'])) { ?>
-    
+      
             <?php foreach ($list['subset'] as $item) { ?>
                 <tr>
                     <td class="checkbox-column">
@@ -64,7 +80,7 @@
                     </td>                
                     <td class="">
                         <h5>
-                        <a href="./dash/track/project/read/<?php echo $item->id; ?>">
+                        <a href="./dash/track/display/read/<?php echo $item->id; ?>">
                             <?php echo $item->name; ?>
                         </a>
                         </h5>
@@ -83,9 +99,9 @@
                         
                     </td>
                     <td class="text-center">
-                      <a class="btn btn-small btn-success" href="./dash/track/project/edit/<?php echo $item->id; ?>">
+                      <a class="btn btn-small btn-success" href="./dash/track/display/edit/<?php echo $item->id; ?>">
                       <i class="btn-icon-only icon-edit"> </i></a> 
-                      <a class="btn btn-danger btn-small" href="./dash/track/project/delete/<?php echo $item->id; ?>">
+                      <a class="btn btn-danger btn-small" href="./dash/track/display/delete/<?php echo $item->id; ?>">
                       <i class="btn-icon-only icon-remove"> </i>
                       </a>
 

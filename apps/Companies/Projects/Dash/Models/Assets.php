@@ -3,7 +3,7 @@ namespace Companies\Projects\Dash\Models;
 
 class Projects extends Base 
 {
-    protected $collection = 'projects';
+    protected $collection = 'projects.displays.assets';
     protected $default_ordering_direction = '1';
     protected $default_ordering_field = 'name';
 
@@ -17,11 +17,6 @@ class Projects extends Base
         
         parent::__construct($config);
     }
-
-    public function getPrefab() {
-        $prefab = New Companies\Projects\Dash\Models\Prefabs\Project();
-        return $prefab;
-    }
     
     protected function fetchFilters()
     {   
@@ -32,6 +27,7 @@ class Projects extends Base
             $key =  new \MongoRegex('/'. $filter_keyword .'/i');
     
             $where = array();
+            $where[] = array('display_id'=>$key);
             $where[] = array('name'=>$key);
             $where[] = array('start_date'=>$key);
             $where[] = array('end_date'=>$key);
@@ -75,15 +71,6 @@ class Projects extends Base
         }*/
     
         return $this->filters;
-    }
-
-
-    public function getDisplays($id) {
-        $model = new \Companies\Projects\Dash\Models\Displays;
-
-        $list = $model->emptyState()->populateState()->setFilter('project_id', (string) $id)->getList();
-        
-        return $list;
     }
 }
 ?>

@@ -30,7 +30,7 @@
             },
             {
                 "title": "Add New",
-                "route": "\/admin\/blog\/post",
+                "route": "\/admin\/blog\/post\/create",
                 "icon": "fa fa-plus"
             },
             {

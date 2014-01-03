@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "1afde399ea07c1551414ef256988a255",
+    "hash": "91c194068aa95805980145a87f02f96b",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "f407423f1b5a9672145988d70c66dff7d80fafb3"
+                "reference": "4be7f2a5bf7b17da9c281d7ff5790b35c725fe33"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f407423f1b5a9672145988d70c66dff7d80fafb3",
-                "reference": "f407423f1b5a9672145988d70c66dff7d80fafb3",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4be7f2a5bf7b17da9c281d7ff5790b35c725fe33",
+                "reference": "4be7f2a5bf7b17da9c281d7ff5790b35c725fe33",
                 "shasum": ""
             },
             "require": {
@@ -71,7 +71,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2013-12-30 22:26:29"
+            "time": "2014-01-01 21:14:44"
         },
         {
             "name": "bcosca/fatfree",
@@ -79,12 +79,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/bcosca/fatfree.git",
-                "reference": "7d9a0fca9f18a45b031d3c5149cf9d3abca80058"
+                "reference": "ec62b25a55e0068b1a42ef8ef20a88f306f9becd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/7d9a0fca9f18a45b031d3c5149cf9d3abca80058",
-                "reference": "7d9a0fca9f18a45b031d3c5149cf9d3abca80058",
+                "url": "https://api.github.com/repos/bcosca/fatfree/zipball/ec62b25a55e0068b1a42ef8ef20a88f306f9becd",
+                "reference": "ec62b25a55e0068b1a42ef8ef20a88f306f9becd",
                 "shasum": ""
             },
             "require": {
@@ -97,7 +97,7 @@
             ],
             "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
             "homepage": "http://fatfreeframework.com/",
-            "time": "2013-12-30 02:20:54"
+            "time": "2014-01-02 17:52:45"
         },
         {
             "name": "dioscouri/f3-admin",
@@ -241,12 +241,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dioscouri/f3-lib.git",
-                "reference": "f631361225d7e7729219a38a25e62661ae3b4daf"
+                "reference": "66860314d2229f5acd3820b59faa02816e4763f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/f631361225d7e7729219a38a25e62661ae3b4daf",
-                "reference": "f631361225d7e7729219a38a25e62661ae3b4daf",
+                "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/66860314d2229f5acd3820b59faa02816e4763f9",
+                "reference": "66860314d2229f5acd3820b59faa02816e4763f9",
                 "shasum": ""
             },
             "require": {
@@ -277,7 +277,7 @@
                 "F3",
                 "rad"
             ],
-            "time": "2013-12-31 15:54:00"
+            "time": "2014-01-02 18:09:15"
         },
         {
             "name": "dioscouri/f3-users",

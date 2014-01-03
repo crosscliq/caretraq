@@ -1,7 +1,7 @@
 <?php 
 namespace Companies\Projects\Dash\Models;
 
-class Base extends \Dsc\Model 
+class Base extends \Dsc\Models\Db\Mongo  
 {
     protected $db = null; // the db connection object
     

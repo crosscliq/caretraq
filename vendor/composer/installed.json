@@ -542,104 +542,6 @@
         "homepage": "https://github.com/firephp/firephp-core"
     },
     {
-        "name": "bcosca/fatfree",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/bcosca/fatfree.git",
-            "reference": "7d9a0fca9f18a45b031d3c5149cf9d3abca80058"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/bcosca/fatfree/zipball/7d9a0fca9f18a45b031d3c5149cf9d3abca80058",
-            "reference": "7d9a0fca9f18a45b031d3c5149cf9d3abca80058",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "time": "2013-12-30 02:20:54",
-        "type": "library",
-        "installation-source": "source",
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL-3.0"
-        ],
-        "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
-        "homepage": "http://fatfreeframework.com/"
-    },
-    {
-        "name": "aws/aws-sdk-php",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/aws/aws-sdk-php.git",
-            "reference": "f407423f1b5a9672145988d70c66dff7d80fafb3"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/f407423f1b5a9672145988d70c66dff7d80fafb3",
-            "reference": "f407423f1b5a9672145988d70c66dff7d80fafb3",
-            "shasum": ""
-        },
-        "require": {
-            "guzzle/guzzle": ">=3.7.0,<3.9.0",
-            "php": ">=5.3.3"
-        },
-        "require-dev": {
-            "doctrine/cache": "~1.0",
-            "ext-openssl": "*",
-            "monolog/monolog": "1.4.*",
-            "phpunit/phpunit": "3.7.*",
-            "symfony/class-loader": "2.*",
-            "symfony/yaml": "2.*"
-        },
-        "suggest": {
-            "doctrine/cache": "Adds support for caching of credentials and responses",
-            "ext-apc": "Allows service description opcode caching, request and response caching, and credentials caching",
-            "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
-            "monolog/monolog": "Adds support for logging HTTP requests and responses",
-            "symfony/yaml": "Eases the ability to write manifests for creating jobs in AWS Import/Export"
-        },
-        "time": "2013-12-30 22:26:29",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "2.4.x-dev"
-            }
-        },
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Aws": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Amazon Web Services",
-                "homepage": "http://aws.amazon.com"
-            }
-        ],
-        "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
-        "homepage": "http://aws.amazon.com/sdkforphp",
-        "keywords": [
-            "amazon",
-            "aws",
-            "cloud",
-            "dynamodb",
-            "ec2",
-            "glacier",
-            "s3",
-            "sdk"
-        ]
-    },
-    {
         "name": "pusher/pusher-php-server",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -683,52 +585,6 @@
             "realtime",
             "rest",
             "trigger"
-        ]
-    },
-    {
-        "name": "dioscouri/f3-lib",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/dioscouri/f3-lib.git",
-            "reference": "f631361225d7e7729219a38a25e62661ae3b4daf"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/f631361225d7e7729219a38a25e62661ae3b4daf",
-            "reference": "f631361225d7e7729219a38a25e62661ae3b4daf",
-            "shasum": ""
-        },
-        "require": {
-            "joomla/framework": ">=1.0",
-            "php": ">=5.4.0"
-        },
-        "time": "2013-12-31 15:54:00",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Dsc": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "GPL"
-        ],
-        "authors": [
-            {
-                "name": "Rafael Diaz-Tushman",
-                "email": "rdiaztushman@dioscouri.com",
-                "homepage": "http://dioscouri.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Library for the F3-framework",
-        "homepage": "https://github.com/dioscouri/f3-lib",
-        "keywords": [
-            "F3",
-            "rad"
         ]
     },
     {
@@ -777,6 +633,150 @@
             "CMS",
             "F3",
             "RAD"
+        ]
+    },
+    {
+        "name": "aws/aws-sdk-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/aws/aws-sdk-php.git",
+            "reference": "4be7f2a5bf7b17da9c281d7ff5790b35c725fe33"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/4be7f2a5bf7b17da9c281d7ff5790b35c725fe33",
+            "reference": "4be7f2a5bf7b17da9c281d7ff5790b35c725fe33",
+            "shasum": ""
+        },
+        "require": {
+            "guzzle/guzzle": ">=3.7.0,<3.9.0",
+            "php": ">=5.3.3"
+        },
+        "require-dev": {
+            "doctrine/cache": "~1.0",
+            "ext-openssl": "*",
+            "monolog/monolog": "1.4.*",
+            "phpunit/phpunit": "3.7.*",
+            "symfony/class-loader": "2.*",
+            "symfony/yaml": "2.*"
+        },
+        "suggest": {
+            "doctrine/cache": "Adds support for caching of credentials and responses",
+            "ext-apc": "Allows service description opcode caching, request and response caching, and credentials caching",
+            "ext-openssl": "Allows working with CloudFront private distributions and verifying received SNS messages",
+            "monolog/monolog": "Adds support for logging HTTP requests and responses",
+            "symfony/yaml": "Eases the ability to write manifests for creating jobs in AWS Import/Export"
+        },
+        "time": "2014-01-01 21:14:44",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.4.x-dev"
+            }
+        },
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Aws": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Amazon Web Services",
+                "homepage": "http://aws.amazon.com"
+            }
+        ],
+        "description": "AWS SDK for PHP - Use Amazon Web Services in your PHP project",
+        "homepage": "http://aws.amazon.com/sdkforphp",
+        "keywords": [
+            "amazon",
+            "aws",
+            "cloud",
+            "dynamodb",
+            "ec2",
+            "glacier",
+            "s3",
+            "sdk"
+        ]
+    },
+    {
+        "name": "bcosca/fatfree",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/bcosca/fatfree.git",
+            "reference": "ec62b25a55e0068b1a42ef8ef20a88f306f9becd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/bcosca/fatfree/zipball/ec62b25a55e0068b1a42ef8ef20a88f306f9becd",
+            "reference": "ec62b25a55e0068b1a42ef8ef20a88f306f9becd",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2014-01-02 17:52:45",
+        "type": "library",
+        "installation-source": "source",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-3.0"
+        ],
+        "description": "A powerful yet easy-to-use PHP micro-framework designed to help you build dynamic and robust Web applications - fast!",
+        "homepage": "http://fatfreeframework.com/"
+    },
+    {
+        "name": "dioscouri/f3-lib",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/dioscouri/f3-lib.git",
+            "reference": "66860314d2229f5acd3820b59faa02816e4763f9"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/dioscouri/f3-lib/zipball/66860314d2229f5acd3820b59faa02816e4763f9",
+            "reference": "66860314d2229f5acd3820b59faa02816e4763f9",
+            "shasum": ""
+        },
+        "require": {
+            "joomla/framework": ">=1.0",
+            "php": ">=5.4.0"
+        },
+        "time": "2014-01-02 18:09:15",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Dsc": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL"
+        ],
+        "authors": [
+            {
+                "name": "Rafael Diaz-Tushman",
+                "email": "rdiaztushman@dioscouri.com",
+                "homepage": "http://dioscouri.com",
+                "role": "Developer"
+            }
+        ],
+        "description": "Library for the F3-framework",
+        "homepage": "https://github.com/dioscouri/f3-lib",
+        "keywords": [
+            "F3",
+            "rad"
         ]
     }
 ]

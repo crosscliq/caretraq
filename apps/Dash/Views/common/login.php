@@ -2,7 +2,7 @@
 
 	<h5>Please sign in to get access.</h5>
 
-	<form id="login-form" action="./admin/login" class="form" method="post">
+	<form id="login-form" action="./dash/login" class="form" method="post">
 
 		<div class="form-group">
 			<label for="login-username">Username</label>

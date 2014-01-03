@@ -8,8 +8,8 @@ switch ($global_app_name)
     
         $f3->config( $f3->get('PATH_ROOT').'apps/Dash/config.ini');
     	$f3->route('GET /dash', '\Dash\Controllers\Dashboard->display');
-        $f3->route('GET|POST /dash/login', '\Dash\Controllers\Login->login');
-       
+        $f3->route('GET /dash/login', '\Dash\Controllers\Login->login');
+        $f3->route('POST /dash/login', '\Dash\Controllers\Login->auth');
         // TODO set some app-specific settings, if desired
         // append this app's UI folder to the path
         $ui = $f3->get('UI');

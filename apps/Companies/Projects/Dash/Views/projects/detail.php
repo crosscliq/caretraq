@@ -1,19 +1,71 @@
 <?php //echo \Dsc\Debug::dump( $state, false ); ?>
+<?php //echo \Dsc\Debug::dump( $item, false ); ?>
 
 <div class="row">
 
     <div class="col-md-9 col-sm-6">
 
-        <h2><?php echo !(empty($item->first_name)) ? $item->first_name : null; ?> <?php echo !(empty($item->last_name)) ? $item->last_name : null; ?></h2>
-        <h3><?php echo $item->username; ?></h3>
-
-        <hr />
-
+        <h2 class="pull-left"><?php echo !(empty($item->name)) ? $item->name : null; ?></h2>
+        <a class="btn btn-success pull-right" href="./dash/track/project/edit/<?php echo $item->_id; ?>" class="btn btn-secondary">Edit</a>
+        <br clear="both">
+        <hr  />
         <p>
-            <a href="./dash/user/edit/<?php echo $item->_id; ?>" class="btn btn-secondary">Edit</a>
+            <?php echo !(empty($item->description)) ? $item->description : null; ?>
         </p>
 
         <hr />
+
+
+        <div class="widget">
+              <div class="widget-header"> <i class="icon-bookmark"></i>
+              <h3>Displays</h3>
+            </div>
+              <!-- /widget-header -->
+          <div class="widget-content">
+              <div class="widget widget-tabs">
+                <div>
+                  <ul class="nav nav-tabs">
+                    <li class="active"> <a data-toggle="tab" href="#care">Displays</a> </li>
+                    <li class=""> <a data-toggle="tab" href="#sales">Create Display</a> </li>
+                    <li class=""> <a data-toggle="tab" href="#admin">CVS Upload Displays</a> </li>
+
+                  </ul>
+                </div>
+                <div class="tab-content">
+
+                  <div class="tab-pane clearfix active" id="care">
+                 
+                    <ul class="users-list">
+                    <?php foreach ($displays as $display) : ?>
+                       <li> <img class="pull-left img-circle" alt="" src="./dashboard/images/img1.jpg">
+                        <div class="user-info">
+                          <div class="name"><a href="./dash/track/display/read/<?php echo $display->id ?>"><?php echo $display->name ?></a></div>
+                          <div class="position">asdf</div>
+                          <div class="time">Display id: <?php echo $display->id ?></div>
+                        </div>
+                      </li>
+                    <?php endforeach; ?>
+                   
+                      
+                    </ul>
+                  </div>
+
+                  <div class="tab-pane clearfix" id="sales">
+                   <form action="">
+                     <?php echo $this->renderLayout('Companies/Projects/Dash/Views::displays/quickcreate.php'); ?>
+                    </form>
+                  </div>
+
+                  <div class="tab-pane clearfix" id="admin">
+                    <form >CSV fupload displays</form>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+              <!-- /widget-content --> 
+            </div>
+          
 
         <ul class="icons-list">
             <li>

@@ -1,10 +1,10 @@
 
-<form id="detail-form" action="<?php echo $action; ?>" class="form-horizontal" method="post">
+<form id="detail-form" action="./dash/track/display/add" class="form-horizontal" method="post">
     <div class="row">
         <div class="col-md-9">
             <div class="form-group">
 
-        <label class="col-md-3">Project Name</label>
+        <label class="col-md-3">Display Name</label>
 
         <div class="col-md-7">
             <input type="text" name="name"
@@ -14,18 +14,21 @@
         <!-- /.col -->
 
     </div>
-
-
     <!-- /.form-group -->
-
     <div class="form-group">
 
-        <label class="col-md-3">Start Date</label>
+        <label class="col-md-3">Project</label>
 
         <div class="col-md-7">
-            <input type="text" name="start_date"
-                value="<?php echo $flash->old('start_date'); ?>"
-                class="form-control" />
+           <select name="project_id" class="pull-left">
+<?php foreach ($projects as $project) : ?>
+<option 
+<?php if($project_id == $project->_id) : ?>
+selected=selected
+<?php endif; ?>
+value="<?php echo $project->_id; ?>"><?php echo $project->name; ?></option>
+<?php endforeach; ?>
+</select>
         </div>
         <!-- /.col -->
 
@@ -34,36 +37,17 @@
 
     <div class="form-group">
 
-        <label class="col-md-3">End Date</label>
+        <label class="col-md-3">option2</label>
 
         <div class="col-md-7">
-            <input type="text" name="end_date"
-                value="<?php echo $flash->old('end_date'); ?>"
+            <input type="text" name="option2"
+                value="<?php echo $flash->old('option2'); ?>"
                 class="form-control" />
         </div>
         <!-- /.col -->
 
     </div>
    
-     <!-- /.form-group -->
-
-    <div class="form-group">
-
-        <label class="col-md-3">Description</label>
-
-        <div class="col-md-7">
-            <textarea  name="description" class="form-control" /><?php echo trim($flash->old('description')); ?></textarea>
-        </div>
-        <!-- /.col -->
-
-    </div>
-    <!-- /.form-group -->
-
-
-
-    <!-- /.form-group -->
-
-<hr />
 
     <div class="form-actions">
 
@@ -87,7 +71,7 @@
                         href="javascript:void(0);">Save & Close</a></li>
                 </ul>
             </div>
-            &nbsp; <a class="btn btn-default" href="./dash/track/projects">Cancel</a>
+            &nbsp; <a class="btn btn-default" href="./dash/users">Cancel</a>
         </div>
 
     </div>
@@ -95,6 +79,6 @@
 
 
         </div>
-        
+      
     </div>
 </form>

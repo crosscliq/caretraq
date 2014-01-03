@@ -7,21 +7,17 @@ switch ($global_app_name)
     case "dash":
     
         $f3->config( $f3->get('PATH_ROOT').'apps/Companies/Projects/config.ini');
-
-      // register all the routes
-        $f3->route('GET|POST /dash/projects', '\Companies\Projects\Dash\Controllers\Projects->display');
-        $f3->route('GET|POST /dash/projects/@page', '\Companies\Projects\Dash\Controllers\Projects->display');
-        $f3->route('GET|POST /dash/projects/delete', '\Companies\Projects\Dash\Controllers\Projects->delete');
-        $f3->route('GET /dash/project', '\Companies\Projects\Dash\Controllers\Project->create');
-        $f3->route('POST /dash/project', '\Companies\Projects\Dash\Controllers\Project->add');
-        $f3->route('GET /dash/project/@id', '\Companies\Projects\Dash\Controllers\Project->read');
-        $f3->route('GET /dash/project/@id/edit', '\Companies\Projects\Dash\Controllers\Project->edit');
-        $f3->route('POST /dash/project/@id', '\Companies\Projects\Dash\Controllers\Project->update');
-        $f3->route('DELETE /dash/project/@id', '\Companies\Projects\Dash\Controllers\Project->delete');
-        $f3->route('GET /dash/project/@id/delete', '\Companies\Projects\Dash\Controllers\Project->delete');    
-
-        // TODO set some app-specific settings, if desired
-        
+        $namespace = "\Companies\Projects\Dash\Controllers\\";
+        $base = 'dash/track';
+        $f3->set('projects_base', $base);
+        //no action calls diplay function, this should be plural
+        $f3->route("GET|POST /{$base}/@resource", "{$namespace}@resource->display");
+        $f3->route("GET|POST /{$base}/@resource/paginate/@page", "{$namespace}@resource->display");  
+        $f3->route("GET|POST /{$base}/@resource/@action", "{$namespace}@resource->@action");
+        $f3->route("GET|POST /{$base}/@resource/@action/@id", "{$namespace}@resource->@action");
+         $f3->route("GET|POST /{$base}/@resource/page/@page", "{$namespace}@resource->display");
+         $f3->route("GET|POST /{$base}/@resource/@action/page/@page", "{$namespace}@resource->@action");
+        //  $f3->route("DELETE  /{$base}/@resource/@id", "{$namespace}@resource->delete");
         // append this app's UI folder to the path
         $ui = $f3->get('UI');
         $ui .= ";" . $f3->get('PATH_ROOT') . "apps/Companies/Projects/Dash/Views/";
