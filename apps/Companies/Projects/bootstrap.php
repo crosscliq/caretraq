@@ -15,8 +15,8 @@ switch ($global_app_name)
         $f3->route("GET|POST /{$base}/@resource/paginate/@page", "{$namespace}@resource->display");  
         $f3->route("GET|POST /{$base}/@resource/@action", "{$namespace}@resource->@action");
         $f3->route("GET|POST /{$base}/@resource/@action/@id", "{$namespace}@resource->@action");
-         $f3->route("GET|POST /{$base}/@resource/page/@page", "{$namespace}@resource->display");
-         $f3->route("GET|POST /{$base}/@resource/@action/page/@page", "{$namespace}@resource->@action");
+        $f3->route("GET|POST /{$base}/@resource/page/@page", "{$namespace}@resource->display");
+        $f3->route("GET|POST /{$base}/@resource/@action/page/@page", "{$namespace}@resource->@action");
         //  $f3->route("DELETE  /{$base}/@resource/@id", "{$namespace}@resource->delete");
         // append this app's UI folder to the path
         $ui = $f3->get('UI');
